@@ -1,5 +1,6 @@
 # Ettore-Auto-Avaliação
 
+```py
 from os import system
 
 def cadastrar(qtnd) -> None:
@@ -53,3 +54,5 @@ if __name__ == '__main__':
             listar()
         elif opcao == '4':
             break
+
+```
