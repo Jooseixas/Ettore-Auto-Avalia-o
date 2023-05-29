@@ -1,4 +1,5 @@
 # Ettore-Auto-Avaliação
+
 from os import system
 
 def cadastrar(qtnd) -> None:
