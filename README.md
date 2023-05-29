@@ -28,8 +28,7 @@ def listar() -> None:
 menu = """--Bem vindo--
 [1] Cadastrar
 [2] Login
-[3] Listar
-[4] Sair
+[3] Sair
 Opção: """
 
 if __name__ == '__main__':
