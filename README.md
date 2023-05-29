@@ -18,11 +18,15 @@ def login(user, passwd) -> bool:
                 if passwd == senha_user:
                     return True
         return False
-
+        
 def listar() -> None:
+    with open('usuarios.txt', 'a') as file:
+        file.write('carona unimar\n')
+    
     with open('usuarios.txt', 'r') as file:
         print('--lista de usuarios--')
         print(file.read())
+    
     input('aperte enter para continuar')
 
 menu = """--Bem vindo--
