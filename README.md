@@ -19,7 +19,7 @@ def login(user, passwd) -> bool:
                     return True
         return False
 
-def listar() -> None: armazamento
+def listar() -> None:
     with open('usuarios.txt', 'r') as file:
         print('--lista de usuarios--')
         print(file.read())
