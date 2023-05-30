@@ -31,17 +31,21 @@ def listar() -> None:
     
     input('aperte enter para continuar')
 
-menu = """--Bem vindo--
-[1] Cadastrar
-[2] Login
-[3] Sair
-Opção: """
+def exibir_menu():
+    menu = """--Bem vindo--
+    [1] Cadastrar
+    [2] Login
+    [3] Listar
+    [4] Sair
+    Opção: """
+    opcao = input(menu)
+    return opcao
 
-if __name__ == '__main__':
+def carona_unimar():
     print("Carona Unimar")
     while True:
         system('cls')
-        opcao = input(menu)
+        opcao = exibir_menu()
         system('cls')
 
         if opcao == '1':
@@ -59,5 +63,9 @@ if __name__ == '__main__':
             listar()
         elif opcao == '4':
             break
+
+if __name__ == '__main__':
+    carona_unimar()
+
 
 ```
