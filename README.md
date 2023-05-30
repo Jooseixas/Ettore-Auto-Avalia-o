@@ -1,16 +1,17 @@
 # Ettore-Auto-Avaliação
 
 ```py
-# Carona Unimar
 
-from os import system
+# Carona Unimar
+import os
+import getpass
 
 class CaronaUnimar:
     def cadastrar(self, qtnd) -> None:
         with open('usuarios.txt', 'a') as file:
             for i in range(qtnd):
                 user = input(f'Nome do usuário {i+1}: ')
-                passwd = input(f'Senha do usuário {i+1}: ')
+                passwd = getpass.getpass(f'Senha do usuário {i+1}: ')
                 file.write(f'{user}:{passwd}\n')
 
     def login(self, user, passwd) -> bool:
@@ -45,16 +46,16 @@ class CaronaUnimar:
     def carona_unimar(self):
         print("Carona Unimar")
         while True:
-            system('cls')
+            os.system('cls' if os.name == 'nt' else 'clear')
             opcao = self.exibir_menu()
-            system('cls')
+            os.system('cls' if os.name == 'nt' else 'clear')
 
             if opcao == '1':
                 qtnd = int(input('Quantidade de usuários: '))
                 self.cadastrar(qtnd)
             elif opcao == '2':
                 user = input('Usuário: ')
-                passwd = input('Senha: ')
+                passwd = getpass.getpass('Senha: ')
                 if self.login(user, passwd):
                     print(f'Entrou com sucesso na conta {user}')
                 else:
